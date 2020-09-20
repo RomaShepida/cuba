@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* не учитывать расшинрение елементов падингами и т.д. */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -18,6 +20,20 @@ body {
   font-weight: 400;
 }
 
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-content {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+.underline {
+  border-bottom: 1px solid rgba(216, 208, 208, 0.5);
+}
+
 .header__top {
   background-image: url("../images/header/header-bg.jpg");
   height: 100vh;
@@ -27,12 +43,12 @@ body {
   padding: 40px;
 }
 .header__top-inner {
-  border: 2px solid #ECB84C;
+  border: 2px solid #ecb84c;
   border-bottom: none;
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Georgia;
 }
 .header__title {
@@ -53,7 +69,7 @@ body {
 }
 .header__text::before, .header__text::after {
   content: "";
-  border-top: 2px solid #ECB84C;
+  border-top: 2px solid #ecb84c;
   width: 100%;
 }
 .header__text::before {
@@ -63,9 +79,6 @@ body {
   margin-left: 30px;
 }
 
-.menu {
-  border-bottom: 1px solid rgba(208, 212, 216, 0.5);
-}
 .menu__list {
   display: flex;
   justify-content: center;
@@ -82,6 +95,55 @@ body {
   transition: all 0.5s;
 }
 .menu__list-link:hover {
-  color: #4E5665;
-  border-bottom: 4px solid #ECB84C;
+  color: #4e5665;
+  border-bottom: 4px solid #ecb84c;
+}
+
+.reason {
+  padding-top: 80px;
+}
+.reason__title {
+  margin-bottom: 22px;
+  font-size: 32px;
+  line-height: 38px;
+  font-family: Georgia;
+  font-weight: 400;
+  text-align: center;
+  color: #4e5665;
+}
+.reason__link {
+  text-align: right;
+}
+.reason__link a {
+  font-weight: 700;
+  color: #ecb84c;
+  margin-bottom: 36px;
+}
+.reason__link a:hover {
+  text-decoration: underline;
+}
+.reason__stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.reason__stats-item {
+  text-align: center;
+}
+.reason__stats-img {
+  height: 80px;
+  margin-bottom: 32px;
+}
+.reason__stats-num {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #4e5665;
+}
+.reason__stats-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #909090;
 }
