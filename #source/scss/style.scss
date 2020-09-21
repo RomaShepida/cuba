@@ -12,6 +12,10 @@ a {
     display: inline-block;
 }
 
+ul {
+    list-style: none;
+}
+
 // ===== GLOBAL VALUES =====
 body {
     color: #505050;
@@ -349,5 +353,97 @@ body {
     // .slick-next button
     &-next {
         right: -20px;
+    }
+}
+
+.footer {
+    background: #f8f8f8;
+    padding: 55px 0 32px;
+
+    // .footer__items
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    // .footer__item
+    &__item {
+        width: 140px;
+
+        // .footer__item-title
+        &-title {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            color: #4e5665;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        // .footer__item-link
+        &-link {
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 8px;
+            transition: 0.5s;
+
+            &:hover {
+                color: rgba($color: #ecb84c, $alpha: 0.9);
+                transition: 0.5s;
+            }
+
+            // .footer__item-link--social
+            &--social {
+                padding-left: 28px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+            // .footer__item-link--message
+            &--message::before {
+                background-image: url(../images/footer/message.svg);
+                width: 17px;
+                top: 1px;
+            }
+            // .footer__item-link--facebook
+            &--facebook::before {
+                background-image: url(../images/footer/facebook.svg);
+            }
+            // .footer__item-link--instagram
+            &--instagram::before {
+                background-image: url(../images/footer/instagram.svg);
+            }
+            // .footer__item-link--youtube
+            &--youtube::before {
+                background-image: url(../images/footer/youtube.svg);
+            }
+            // .footer__item-link--email
+            &--email::before {
+                background-image: url(../images/footer/email.svg);
+                height: 13px;
+                top: 2px;
+            }
+        }
+        // .footer__item--company
+        &--company {
+            width: 300px;
+            padding-left: 180px;
+        }
+        // .footer__item--blog
+        &--blog {
+            width: 300px;
+        }
+    }
+    // .footer__copyright
+    &__copyright {
+        padding-top: 40px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 19px;
     }
 }
