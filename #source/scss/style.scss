@@ -33,6 +33,14 @@ body {
     }
 }
 
+.title {
+    font-family: Georgia;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 400;
+    color: #4e5665;
+}
+
 .underline {
     border-bottom: 1px solid rgba($color: #d8d0d0, $alpha: 0.5);
 }
@@ -143,15 +151,7 @@ body {
     // .reason__title
     &__title {
         margin-bottom: 22px;
-
-        font-size: 32px;
-        line-height: 38px;
-        font-family: Georgia;
-        font-weight: 400;
-
         text-align: center;
-
-        color: #4e5665;
     }
 
     // .reason__text
@@ -203,6 +203,92 @@ body {
             font-size: 14px;
             line-height: 17px;
             color: #909090;
+        }
+    }
+}
+
+// .about
+.about {
+    padding-top: 80px;
+
+    // .about__title
+    &__title {
+        text-align: center;
+        margin-bottom: 13px;
+    }
+    // .about__text
+    &__text {
+        margin-bottom: 72px;
+    }
+    // .about__item
+    &__item {
+        margin-bottom: 100px;
+        padding: 70px 0;
+        background-repeat: no-repeat;
+        background-position: right;
+
+        &:nth-child(even) {
+            background-position: left;
+
+            & .about__box {
+                margin-left: auto;
+
+                &::before {
+                    right: 19px;
+                    left: auto;
+                    border-left: none;
+                    border-right: 2px solid #ecb84c;
+                }
+
+                &::after {
+                    left: 19px;
+                    border-right: none;
+                    border-left: 2px solid #ecb84c;
+                }
+            }
+        }
+    }
+    // .about__box
+    &__box {
+        padding: 33px 40px;
+        background-color: #fff;
+        max-width: 470px;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 33px;
+            height: 33px;
+        }
+
+        &::after {
+            border-bottom: 2px solid #ecb84c;
+            border-right: 2px solid #ecb84c;
+            bottom: 19px;
+            right: 19px;
+        }
+
+        &::before {
+            border-top: 2px solid #ecb84c;
+            border-left: 2px solid #ecb84c;
+            top: 19px;
+            left: 19px;
+        }
+
+        // .about__box-title
+        &-title {
+            margin-bottom: 20px;
+            font-family: Georgia;
+            font-size: 24px;
+            line-height: 25px;
+            font-weight: 400;
+
+            color: #4e5665;
+        }
+        // .about__box-text
+        &-text {
         }
     }
 }
