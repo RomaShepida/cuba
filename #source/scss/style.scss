@@ -41,7 +41,7 @@ body {
     color: #4e5665;
 }
 
-.underline {
+.section-line {
     border-bottom: 1px solid rgba($color: #d8d0d0, $alpha: 0.5);
 }
 
@@ -287,8 +287,67 @@ body {
 
             color: #4e5665;
         }
-        // .about__box-text
-        &-text {
+    }
+}
+
+// .photo
+.photo {
+    padding: 80px 0;
+
+    // .photo__title
+    &__title {
+        margin-bottom: 42px;
+        text-align: center;
+    }
+    // .photo__text
+    &__text {
+        padding-bottom: 48px;
+        margin-bottom: 56px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 270px;
+            height: 1px;
+            background-color: rgba($color: #d0d4d8, $alpha: 0.5);
+            bottom: 0;
+            margin: 0 auto;
         }
+    }
+    // .photo__slider
+    &__slider {
+        max-width: 640px;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow: 0 0 25px rgba($color: #414141, $alpha: 1);
+    }
+    // .photo__img
+    &__img {
+        border-radius: 5px;
+    }
+}
+
+.slick {
+    // .slick-arrow
+    &-arrow {
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ecb84c;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+    }
+    // .slick-prev button
+    &-prev {
+        left: -20px;
+    }
+    // .slick-next button
+    &-next {
+        right: -20px;
     }
 }
