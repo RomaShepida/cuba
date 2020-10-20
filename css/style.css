@@ -312,6 +312,8 @@ body {
   height: 1px;
   background-color: rgba(208, 212, 216, 0.5);
   bottom: 0;
+  left: 0;
+  right: 0;
   margin: 0 auto;
 }
 .photo__slider {
@@ -454,6 +456,11 @@ body {
   .about__dot:hover::before {
     display: none;
   }
+
+  .footer__item--company {
+    width: 140px;
+    padding-left: 0;
+  }
 }
 @media (max-width: 900px) {
   .about__dot {
@@ -474,6 +481,30 @@ body {
   }
   .about__item:nth-child(even) {
     background-position: top;
+  }
+
+  .photo {
+    padding: 40px 0px;
+  }
+
+  .about__preview-text {
+    margin-bottom: 40px;
+  }
+
+  .slick-prev {
+    left: 15px;
+  }
+  .slick-next {
+    right: 15px;
+  }
+
+  .footer__items {
+    flex-wrap: wrap;
+  }
+  .footer__item {
+    width: 50%;
+    margin-bottom: 35px;
+    padding-right: 25px;
   }
 }
 @media (max-width: 700px) {
@@ -554,6 +585,15 @@ body {
   }
   .reason__stats-item {
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 470px) {
+  .footer__items {
+    display: block;
+  }
+  .footer__item {
+    width: 100%;
+    padding-right: 0;
   }
 }
 @media (min-width: 700px) {
